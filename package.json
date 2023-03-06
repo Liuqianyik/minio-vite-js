@@ -1,0 +1,23 @@
+{
+  "name": "minio-vite-js",
+  "version": "0.0.5",
+  "description": "minioclient with vite",
+  "main": "dist/minio-js.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [
+    "minio"
+  ],
+  "author": "liuqianyik",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "minio": "^7.0.32",
+    "node-polyfill-webpack-plugin": "^2.0.1"
+  }
+}

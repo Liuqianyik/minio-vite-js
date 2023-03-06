@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>MinioJs</title>
+  </head>
+  <body>
+    <div id="root">MinioJs</div>
+    <script type="text/javascript" src="./MinioJs.js"></script>
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-1.10.2.min.js"
+    ></script>
+    <div id="nav">
+      <p>Minio文件上传：</p>
+      <form id="form"><input type="file" name="file" id="file" /><br /></form>
+    </div>
+    <script type="text/javascript">
+      $(function () {
+        form.reset(); //清除浏览器记录的上次记录
+        var file;
+        $(form).on("change", "#file", function (e) {
+          console.log(this.value); //文件路径
+          console.log(this.files[0].name); //文件名
+
+          //把文件以ArrayBuffer的形式读取后给Minio上传
+          var f = this.files[0];
+          let reader = new FileReader();
+          reader.readAsArrayBuffer(f);
+          reader.onload = function (e) {
+            let res = e.target.result; //ArrayBuffer
+            //先初始化
+            MinioJs.initMinio({
+              endPoint: "192.168.2.98",
+              port: 9002,
+              useSSL: false,
+              accessKey: "admin",
+              secretKey: "12345678",
+            });
+            //再上传
+            MinioJs.putObject("bucket1", res, f.name);
+            console.log("尝试上传中...");
+          };
+        });
+      });
+    </script>
+  </body>
+</html>

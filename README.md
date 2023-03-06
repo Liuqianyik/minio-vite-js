@@ -4,7 +4,7 @@ minio-js提供的接口只有initMinio和putObject，对于其他使用需求不
 在本项目中提供最简单的两个接口：createClient和BufferFrom,具体使用方法见下方
 
 ## 源码地址
-https://gitee.com/zheyiw/minio-js-m
+https://github.com/Liuqianyik/minio-vite-js
 
 ## npm包地址
 https://www.npmjs.com/package/minio-vite-js

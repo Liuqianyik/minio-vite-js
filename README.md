@@ -1,6 +1,10 @@
 ## Minio-Vite-JS
-Minio的官方客户端使用时必须依赖node.js, 无法在vite项目中使用, 此项目把minio的使用打包为纯js,可以在浏览器中直接调用minio的客户端。
-minio-js提供的接口只有initMinio和putObject，对于其他使用需求不够方便，比如下载，删除，获取文件列表，获取文件信息等需求。
+Minio的官方客户端使用时必须依赖node.js, 无法在vite项目中使用。
+
+此项目把minio的使用打包为纯js,可以在浏览器中直接调用minio的客户端。
+
+本项目参考了minio-js，但其提供的接口只有initMinio和putObject，对于其他使用需求不够方便，比如下载，删除，获取文件列表，获取文件信息等需求。
+
 在本项目中提供最简单的两个接口：createClient和BufferFrom,具体使用方法见下方
 
 ## 源码地址

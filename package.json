@@ -1,6 +1,6 @@
 {
   "name": "minio-vite-js",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "minioclient with vite",
   "main": "dist/minio-js.js",
   "scripts": {
@@ -8,8 +8,12 @@
     "build": "webpack"
   },
   "keywords": [
-    "minio"
+    "minio", "vite", "vue3"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Liuqianyik/minio-vite-js.git"
+  },
   "author": "liuqianyik",
   "license": "ISC",
   "devDependencies": {
